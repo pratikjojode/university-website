@@ -1,0 +1,505 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Serif', serif; */
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("eduford_img/banner.png");
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links ul{
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    text-decoration: none;
+}
+
+.nav-links ul a{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    color: white;
+    font-size: 13px;
+    
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+
+.nav-links ul li:hover::after{
+    width: 100% ;
+}
+
+.text-box{
+    color: white;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 50px;
+    padding: 20px;
+    text-transform: capitalize;
+    color: black;
+}
+.text-box  p{
+    text-align: center;
+    padding: 15px;
+    font-size: 25px;
+}
+
+.text-box button{
+    padding: 15px;
+    text-transform: capitalize;
+    font-size: 20px;
+   border: 2px solid black;
+    background: transparent;
+    cursor: pointer;
+    
+
+
+}
+.text-box button a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.text-box button:hover{
+    background-color: green;
+    transition: 0.5s;
+}
+
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+}
+
+/* course */
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.course p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+
+}
+.course-col h3{
+    font-weight: 600;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px black
+}
+
+@media(max-width:700px){
+ .row{
+    flex-direction: column;
+ }
+ form{
+    width: 80%;
+ }
+}
+
+
+
+/* campus */
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+  
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background:rgba(226, 0, 0, 0.7);
+    cursor: pointer;
+}
+.campus-col h3{
+    margin-top: 10px;
+}
+.campus h1{
+    font-size: 36px;
+    font-family:'Poppins', sans-serif; 
+    padding: 10px;
+    text-transform: capitalize;
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position:absolute;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* facilities */
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilities-col h3{
+    text-transform: capitalize;
+    text-align: center;
+    padding: 10px;
+}
+.facilities-col p{
+    text-align: center;
+}
+.facilities h1{
+    text-transform: capitalize;
+    font-size: 36px;
+    
+}
+.facilities p{
+    padding: 10px;
+}
+
+
+
+
+
+/* testimonials */
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.testimonials h1{
+    text-transform: capitalize;
+    font-size: 36px;
+}
+.testimonials p{
+    padding: 10px;
+}
+
+.testimonial-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonial-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonial-col h3{
+margin-top: 15px;
+text-align: left;
+}
+.testimonial-col p{
+    padding: 0;
+}
+
+/* call to action */
+.cta{
+    background-image: url("eduford_img/banner2.jpg");
+    width: 80%;
+    text-align: center;
+    margin:100px auto;
+    background-position: center;
+    background-size: cover;
+    padding: 100px;
+    border-radius: 10px;
+}
+.cta h1{
+    font-size: 36px;
+    margin-bottom: 40px;
+    padding: 0;
+}
+.cta button{
+    background-color: transparent;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 5px solid black;
+    transition: 0.5s;
+
+}
+.cta button a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.cta button:hover{
+    background-color:aqua;
+}
+
+/* fotter */
+
+.fotter{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.fotter h1{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* icons */
+
+.icons{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.icons button{
+    background-color: transparent;
+    border: none;
+    
+}
+
+/* about us */
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: url("eduford_img/background.jpg");
+    background-position:  center;
+    background-size: cover;
+    text-align: center;
+}
+
+.sub-header h1{
+    margin-top: 100px;
+    font-size: 50px;
+}
+
+
+/* about-us */
+.about-us{
+width: 80%;
+margin: auto;
+padding-top: 80px;
+padding-bottom: 50px;
+}
+
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-col img{
+    width: 100%;
+}
+
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+
+.button{
+        border: 2px solid black;
+        padding: 10px;
+        color: black;
+        list-style: none;
+        text-decoration: none;
+        background-color: white;
+        transition: 0.5s;
+}
+
+.button:hover{
+    background-color: orange;
+}
+
+
+/* admissionn page */
+.sub-header2{
+    background-image: url("eduford_img/banner.png");
+    height: 50vh;
+    width: 100%;
+
+}
+
+/* contact us */
+ 
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe{
+    width: 100%;
+}
+
+
+.contact-us{
+    width: 80%;
+    margin: auto;
+    margin-left: 20%;
+}
+
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #CCC;
+    box-sizing: border-box;
+}
+
+.hero-btn {
+    border: 1px solid black;
+    padding: 15px;
+    background-color: transparent;
+    transition: 0.5s;
+    background-color: green;
+    cursor: pointer;
+
+}
+.hero-btn:hover{
+    background-color: orange;
+}
+
+
